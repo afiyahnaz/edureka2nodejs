@@ -6,7 +6,6 @@ const cors = require("cors");
 const carLocationRouter = require('./router/carLocationRouter');
 const carTypeRouter   = require('./router/carTypeRouter');
 const flightRouter   = require('./router/flightRouter');
-const paymentRouter   = require('./router/paymentRouter');
 const locationRouter = require('./router/locationRouter');
 const locationFlightrouter = require('./router/locationFlightRouter');
 const userRouter = require('./router/userRouter');
@@ -41,7 +40,6 @@ mongoose.connect(config.dbConstrFlight,(err,result) => {
 app.use('', carLocationRouter);
 app.use('',carTypeRouter);
 app.use('',flightRouter);
-app.use('', paymentRouter);
 app.use('',userRouter);
 app.use('',locationRouter);
 app.use('',locationFlightrouter);
